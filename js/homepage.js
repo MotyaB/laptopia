@@ -4,7 +4,6 @@ if (mobile) {
 } 
 
 
-
 let timer
 
 function addZero(number) {
