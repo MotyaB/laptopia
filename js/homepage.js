@@ -1,3 +1,10 @@
+var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()))
+if (mobile) { 
+	window.location.href = 'getTheHellOut.html';
+} 
+
+
+
 let timer
 
 function addZero(number) {
@@ -36,14 +43,3 @@ timer = setInterval(function() {
 		alert("Sale is over!")
 	}
 },0)
-
-var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()))
-if (mobile) { 
-	alert("Мобильное устройство!!")
-	$('.navWrap').hide()
-} 
-
-else 
-{ 
-	alert("НЕ мобильное устройство!")
-}
