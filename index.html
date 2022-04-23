@@ -1,5 +1,5 @@
-	<!DOCTYPE html> 
-	<html>
+<!DOCTYPE html> 
+<html>
 	<head>
 		<meta charset='utf-8'>
 
@@ -8,117 +8,153 @@
 	</head>
 
 	<body>
-
-
 		<header>
-			<div class="company"><h1>LAPTOPIA</h1></div>
+			<div class="company"><h1>LAPTOPIA</h1>
+			</div>
 
+			<a href="#modal_open"><img src="img/cart.png"></a>
+				<div id="modal_open" class="my_modal">
+				  <div class="my_modal-dialog">
+				    <div class="my_modal-content">
+				      <div class="my_modal-header">
+				        <p class="my_modal-title">Cart</p>
+				        <a href="#" title="Закрыть корзину" class="close">×</a>
+				      </div>
+				      <div class="my_modal-body">    
+						<button id="checkout">Place an order</button>
+						<button id="clear_cart">Empty the cart</button>
+						<br>
+						<div id="cart_content"></div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
 
-				<input type="checkbox" id="side-checkbox" />
-				<div class="side-panel">
-					<label class="side-button-2" for="side-checkbox">+</label>    
-					<div class="side-title">Product catalog:</div>
-					<div class='main'>
-						<div class='list'>
-							<span>1</span><span>ACER</span>
-						</div>
-						<div class='list'>
-							<span>2</span><span>ASUS</span>
-						</div>
-						<div class='list'>
-							<span>3</span><span>Apple</span>
-						</div>
-						<div class='list'>
-							<span>4</span><span>DELL</span>
-						</div>
-						<div class='list'>
-							<span>5</span><span>Hewlett-Packard</span>
-						</div>
-						<div class='list'>
-							<span>6</span><span>LENOVO</span>
-						</div>
-						<div class='list'>
-							<span>7</span><span>MSI</span>
-						</div>
+			<input type="checkbox" id="side-checkbox" />
+			<div class="side-panel">
+				<label class="side-button-2" for="side-checkbox">+</label>    
+				<div class="side-title">Product catalog:</div>
+				<div class='main'>
+					<div class='list' onclick="location.href='development.html';">
+						<span>1</span><span>ACER</span>
+					</div>
 
+					<div class='list' onclick="location.href='development.html';">
+						<span>2</span><span>ASUS</span>
+					</div>
+
+					<div class='list' onclick="location.href='development.html';">
+						<span>3</span><span>Apple</span>
+					</div>
+
+					<div class='list' onclick="location.href='development.html';">
+						<span>4</span><span>DELL</span>
+					</div>
+
+					<div class='list' onclick="location.href='development.html';">
+						<span>5</span><span>Hewlett-Packard</span>
+					</div>
+
+					<div class='list' onclick="location.href='development.html';">
+						<span>6</span><span>LENOVO</span>
+					</div>
+
+					<div class='list' onclick="location.href='development.html';">
+						<span>7</span><span>MSI</span>
 					</div>
 				</div>
+			</div>
+
 				<div class="side-button-1-wr">
 					<label class="side-button-1" for="side-checkbox">
-						<div class="side-b side-open" title="Открыть меню"><img src="img/menu.png"></div>
-						<div class="side-b side-close" title="Закрыть меню"><img src="img/menu.png"></div>
+						<div class="side-b side-open" title="Открыть меню"><img src="img/menu.png" width="35" height="35"></div>
+						<div class="side-b side-close" title="Закрыть меню"><img src="img/menu.png" width="35" height="35"></div>
 					</label>
 				</div>
 
-			</header>
-<!-- 		<button data-name="Товар1", data-price="1000", data-id="1" class="items">number1</button>
-		<button data-name="Товар2", data-price="500", data-id="2" class="items">number2</button>
-		<button id='cart'>Показать корзину</button> -->
-
-	<!-- 		<button id="start">Start</button>
-			<button id="stop">Stop</button>
-			<div id="sale" style="background: cadetblue; max-width: 100px; min-height: 50px;"> -->
-
-
-				<section class='catalogue'>
-					<div class='laptop ProArtStudiobookPRO16OLED'>
-						<center><span style="font-family: Comfortaa">Креативный профессионализм</span></center><br>
-						<center><img src="img/ProArtStudiobookPro16OLED.png"></center>
-						<center><p style="font-family: Epilogue">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		</header>
+				<div class="catalogue">
+					<div class='item_box'>
+						<div onclick="location.href='development.html';"><center><h3 class="item_title" style="font-family: Jura; color: white;">ProArt Studiobook Pro 16 OLED</h3>
+						<span style="font-family: Comfortaa; color: white;">Creative professionalism</span><br>
+						<img src="img/ProArtStudiobookPro16OLED.png">
+						<p style="font-family: Epilogue; color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></center>
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p style="color: white">Цена: <span class="item_price" style="color: white">100</span>$</p></div>
+						<button class="add_item" data-id="7">Add to Cart</button></center>
 					</div>
-					<div class='laptop ASUSZenbook14XOLED'>
-						<center><span style="font-family: Comfortaa">Увидеть красоту</span></center><br>
-						<center><img src="img/ASUSZenbook14XOLED.png"></center>
-						<center><p style="font-family: Epilogue">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+
+					<div class='item_box' >
+						<div onclick="location.href='development.html';"><center><h3 class="item_title" style="font-family: Jura; color: white;">Zenbook 14X OLED</h3>
+						<span style="font-family: Comfortaa; color: white">See the beauty</span><br>
+						<img src="img/ASUSZenbook14XOLED.png">
+						<p style="font-family: Epilogue; color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></center>
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p style="color: white">Цена: <span class="item_price" style="color: white">50</span>$</p></div>
+						<button class="add_item" data-id="2">Add to Cart</button></center>
 					</div>
-					<div class='laptop ASUSTUFDashF15'>
-							<center><span style="font-family: Comfortaa">Создан для побед</span></center><br>
-							<center><img src="img/ASUSTUFDashF15.png"></center>
-							<center><p style="font-family: Epilogue">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+
+					<div class='item_box'>
+							<div onclick="location.href='development.html';"><center><h3 class="item_title" style="font-family: Jura; color: white;">ASUS TUF Dash F15</h3>
+							<span style="font-family: Comfortaa; color: white;">Created for victories</span><br>
+							<img src="img/ASUSTUFDashF15.png">
+							<p style="font-family: Epilogue; color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></center>
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p style="color: white">Цена: <span class="item_price" style="color: white">250</span>$</p></div>
+							<button class="add_item" data-id="5">Add to Cart</button></center>
 					</div>
-				</section>
+				</div>
 
-			<div class="survey">
-				<h2 style="margin-left: 2%">До конца регистрации:</h2>
-					<div id="timer">
-						<div class="round-rect">
-							days
-							<div id='days'>0</div>
-						</div>
-
-						<div class="round-rect">
-							hours
-							<div id='hours'>0</div>
-						</div>
-
-						<div class="round-rect">
-							minutes
-							<div id='minutes'>0</div>
-						</div>
-
-						<div class="round-rect">
-							seconds
-							<div id='seconds'>0</div>
-						</div>
+		<h2 style="margin-left: 2%">Until the end of registration:</h2>
+			<div id="timer" style="margin-left: 2%">
+					<div class="round-rect">days
+						<div id='days'>0</div>
 					</div>
 
+					<div class="round-rect">hours
+						<div id='hours'>0</div>
+					</div>
+
+					<div class="round-rect">minutes
+						<div id='minutes'>0</div>
+					</div>
+
+					<div class="round-rect">seconds
+						<div id='seconds'>0</div>
+					</div>
+			</div>
+
+
+			<section class="registration">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<div class="input">
+					<input type="text" placeholder="Enter your name" name="name" required>
+					<input type="text" placeholder="Enter your e-mail" name="email" required>
+					<input type="text" placeholder="Enter your phone number" name="phone" required>
+				</div>
+			</section>
 
 		<script type="text/javascript" src='js/homepage.js'>
 		</script>
 	</body>
+
 </html>
+
