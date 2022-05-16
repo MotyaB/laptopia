@@ -15,7 +15,7 @@ function addZero(number) {
 }
 
 let currentDate = new Date()
-let finalDate = new Date(2022,4,1,1) //год, месяц, день, время(ч,м,с)
+let finalDate = new Date(2022,4,25,1) //год, месяц, день, время(ч,м,с)
 let diff = finalDate-currentDate
 
 timer = setInterval(function() {
@@ -91,17 +91,18 @@ function openCart(e){
       totalItems = '';
 
   if(cartData !== null){
-    totalItems = '<table class="shopping_list"><tr><th>Product name</th><th>Price</th><th>Quantity</th></tr>';
+    totalItems = '<table class="shopping_list"><tr><th>Product name</th><th>Price</th><th>Quantity</th><th>Total Price</th></tr>';
     for(var items in cartData){
       totalItems += '<tr>';
       for(var i = 0; i < cartData[items].length; i++){
-        totalItems += '<td>' + cartData[items][i] + '</td>';
+        totalItems += '<td>' + cartData[items][i] +'</td>';
       }
       totalItems += '</tr>';
     }
     totalItems += '<table>';
     cartCont.innerHTML = totalItems;
-  } else {
+   }
+   else {
 
     cartCont.innerHTML = 'The cart is empty!';
   }
@@ -114,3 +115,23 @@ addEvent(d.getElementById('clear_cart'), 'click', function(e){
   localStorage.removeItem('cart');
   cartCont.innerHTML = 'The cart is cleared.';
 });
+
+document.querySelector('#checkout').addEventListener('click', function(){
+  let cart = localStorage.getItem("cart")
+  checkout.user_cart.value = cart
+  order.login_hidden.value = sessionStorage.getItem('user')
+  order.password_hidden.value = seconds.getItem('password')
+  console.log(order.user_cart.value)
+  console.log(order.login_hidden.value)
+  console.log(order.password_hidden.value)
+  order.submit()
+})
+
+// document.querySelector("login-button").addEventListener('click',function(){
+//   document.querySelector('#login').style.display = 'block'
+// })
+
+document.querySelector('#login-OK').addEventListener('click', function(){
+  sessionStorage.setItem('user', document.querySelector('#login-field').value)
+  sessionStorage.setItem('password', document.querySelector('#password-field').value)
+})
