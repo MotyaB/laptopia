@@ -15,7 +15,7 @@ function addZero(number) {
 }
 
 let currentDate = new Date()
-let finalDate = new Date(2022,4,25,1) //год, месяц, день, время(ч,м,с)
+let finalDate = new Date(2022,5,5,1) //год, месяц, день, время(ч,м,с)
 let diff = finalDate-currentDate
 
 timer = setInterval(function() {
@@ -91,7 +91,7 @@ function openCart(e){
       totalItems = '';
 
   if(cartData !== null){
-    totalItems = '<table class="shopping_list"><tr><th>Product name</th><th>Price</th><th>Quantity</th><th>Total Price</th></tr>';
+    totalItems = '<table class="shopping_list"><tr><th>Product name</th><th>Price</th><th>Quantity</th></tr>';
     for(var items in cartData){
       totalItems += '<tr>';
       for(var i = 0; i < cartData[items].length; i++){
